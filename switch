@@ -1,0 +1,38 @@
+.container{
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.flip{
+    background-color: rgb(157, 151, 151);
+    width: 200px;
+    height: 100px;
+    border-radius: 200px;
+    cursor: pointer;
+position: relative;
+transition: 0,5s;
+
+}
+.flip::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    height: 90px;
+    width: 90px; 
+    border-radius: 50%;
+    margin: 5px;
+    transition: 0,5s ;
+}
+input:checked + .flip{
+    background-color: #00B289;
+}
+input:checked + .flip ::before{
+    transform: translateX(100px);
+}
+input{
+    display: none;
+}
